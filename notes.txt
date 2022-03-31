@@ -1,0 +1,7 @@
+Instalando a biblioteca da GCP
+1. Remova a biblioteca google-cloud: python -m pip uninstall google-cloud
+2. Instalei a nova biblioteca: python -m pip install --upgrade google-cloud-storage
+
+ref: https://cloud.google.com/storage/docs/reference/libraries
+
+
