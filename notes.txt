@@ -4,4 +4,8 @@ Instalando a biblioteca da GCP
 
 ref: https://cloud.google.com/storage/docs/reference/libraries
 
+Gerando chave de autenticação:
+ref: https://cloud.google.com/docs/authentication/getting-started#windows
+
+
 
