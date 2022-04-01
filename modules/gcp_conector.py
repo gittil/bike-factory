@@ -1,6 +1,7 @@
 from google.cloud import storage
-import os
 from google.oauth2 import service_account
+from io import StringIO
+
 
 credentials = service_account.Credentials.from_service_account_file(r"D:\workspace\bike-factory-345816-a93afc80e64f.json")
 
@@ -37,31 +38,35 @@ def list_buckets():
         print(bucket.name)
 
 
+
+
+
+
+
+## Não utlizado ainda ----------------------------------------------------------------------
 def download_blob_into_memory(bucket_name, blob_name):
     """Downloads a blob into memory."""
     # The ID of your GCS bucket
     # bucket_name = "your-bucket-name"
-
     # The ID of your GCS object
     # blob_name = "storage-object-name"
 
     storage_client = storage.Client(credentials=credentials)
-
     bucket = storage_client.bucket(bucket_name)
 
     # Construct a client side representation of a blob.
     # Note `Bucket.blob` differs from `Bucket.get_blob` as it doesn't retrieve
     # any content from Google Cloud Storage. As we don't need additional data,
     # using `Bucket.blob` is preferred here.
-    blob = bucket.blob(blob_name)
-    contents = blob.download_as_string()
+    blob = bucket.get_blob(blob_name)
+    download_file = blob.download_as_text(encoding="utf-8")
 
-    print(
-        "Downloaded storage object {} from bucket {} as the following string: {}.".format(
-            blob_name, bucket_name, contents
-        )
-    )
-
+    # print(
+    #     "Downloaded storage object {} from bucket {} as the following string: {}.".format(
+    #         blob_name, bucket_name, contents
+    #     )
+    # )
+    return download_file
 
 
 
