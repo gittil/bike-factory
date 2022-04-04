@@ -78,8 +78,9 @@ Essa será a camada do DataLake que poderá ser disponibilizada para DS's, DA's 
 Para processar os dados nessa camada foi utlizado o framework Spark com a interface PySpark e Spark SQL. <br>
 O notebook com os códigos pode ser acessado aqui: [CURATED](https://github.com/gittil/bike-factory/blob/main/ETL/3-load-curated/load-curated.ipynb)
 
-
+<div>
 <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/11b4cb54-369d-495e-b3c6-89e216d620df/page/pGjpC" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
 
 
 
