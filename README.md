@@ -78,17 +78,17 @@ Essa será a camada do DataLake que poderá ser disponibilizada para DS's, DA's 
 Para processar os dados nessa camada foi utlizado o framework Spark com a interface PySpark e Spark SQL. <br>
 O notebook com os códigos pode ser acessado aqui: [CURATED](https://github.com/gittil/bike-factory/blob/main/ETL/3-load-curated/load-curated.ipynb)
 
-<div>
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/11b4cb54-369d-495e-b3c6-89e216d620df/page/pGjpC" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
 
 
+![Dashboard](images/dashboard.png)
 
+<br><br>
 
 ## Observações e Melhorias:
 
 - Escolhi o formato de notebooks para processar os dados pela interatividade que a ferramenta possibilita, ao mesmo tempo que executamos comandos para tratar podemos ver o resultado.
 - Uma melhoria futura, uma vez que já temos todo o trajeto para tratamento dos dados de cada arquivo, seria criar scripts .py e executar como jobs no Dataproc, utilizando os serviços Pub/Sub e Cloud Functions para disparar os Jobs sempre quando a camada RAW for atualizada e assim mater um certo nível de automação.
+- Aplicar melhorias visuais no Dashboard
 
 
 
