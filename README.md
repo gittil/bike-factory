@@ -85,6 +85,14 @@ As queries que respondem aos questionamentos estão no notebook [CURATED](https:
 
 <br>
 
+Após o uso do Spark SQL para fazer as queries e responder as perguntas, as novas tabelas com os Joins foram salvas na camada CURATED e posteriormente carregadas no BigQuery.
+
+Após a criação dos Datasets com cada uma das tabelas, foram criadas View´s que alimentam o Dashboard.
+
+
+![BigQuery](images/bigquery.png)
+
+
 ### Protótipo do Dashboard sugerido
 
 ![Dashboard](images/dashboard.png)
