@@ -78,6 +78,12 @@ Essa será a camada do DataLake que poderá ser disponibilizada para DS's, DA's 
 Para processar os dados nessa camada foi utlizado o framework Spark com a interface PySpark e Spark SQL. <br>
 O notebook com os códigos pode ser acessado aqui: [CURATED](https://github.com/gittil/bike-factory/blob/main/ETL/3-load-curated/load-curated.ipynb)
 
+<br>
+
+### Respostas para os 5 questionamentos:
+As queries que respondem aos questionamentos estão no notebook [CURATED](https://github.com/gittil/bike-factory/blob/main/ETL/3-load-curated/load-curated.ipynb)  devidamente identificadas e numeradas. 
+
+<br>
 
 ### Protótipo do Dashboard sugerido
 
