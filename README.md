@@ -26,7 +26,7 @@ Explicar qual arquitetura foi escolhida e porque?
 
 # Resolução
 
-## Escolha da arquiterura e provedor de serviço de Cloud: 
+## Escolha da arquitetura e provedor de serviço de Cloud: 
 Para solução do problema proposto foi utilizado a Google Cloud Plataform (GCP), em especial 4 serviços:
 - Cloud Storage para criação do DataLake;
 - Dataproc para processamento dos dados;
