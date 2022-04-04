@@ -14,14 +14,14 @@ O objetivo deste desafio é compreender os seus conhecimentos e experiência ana
 
 Os seguintes arquivos devem ser importados (ETL) para o banco de dados de sua escolha: 
 
-Acesse aqui o modelo relacional fornecido pelo cliente: [Modelo Relacional do Cliente](https://github.com/gittil/bike-factory/blob/main/images/modelo-relacional.jpg)
-
 -	Sales.SpecialOfferProduct.csv
 -	Production.Product.csv
 -	Sales.SalesOrderHeader.csv
 -	Sales.Customer.csv
 -	Person.Person.csv
 -	Sales.SalesOrderDetail.csv
+
+Acesse aqui o modelo relacional fornecido pelo cliente: [Modelo Relacional do Cliente](https://github.com/gittil/bike-factory/blob/main/images/modelo-relacional.jpg)
 
 Explicar qual arquitetura foi escolhida e porque?
 
@@ -52,13 +52,13 @@ Além disso, inclua um arquivo README.md onde você deve compartilhar as decisõ
 ## Escolha da arquitetura e provedor de serviço de Cloud: 
 Para solução do problema proposto foi utilizado a Google Cloud Plataform (GCP), em especial 4 serviços:
 
-- **Cloud Storage** para criação do DataLake: Foi escolhido a Cloud Storage para nosso DataLake pela simplicidade, alta disponibilidade, custo baixo, segurança e integração nativa com as demais ferramentas que iremos utilizar, como por exemplo o DataProc.
+- **Cloud Storage** para criação do DataLake: foi escolhido a Cloud Storage para nosso DataLake pela simplicidade, alta disponibilidade, custo baixo, segurança e integração nativa com as demais ferramentas que iremos utilizar, como por exemplo o DataProc.
 
-- **Dataproc** para processamento dos dados: O Dataproc é um serviço totalmente gerenciado e escalonável para executar o Spark e mais de 30 ferramentas de código aberto. Foi utilizado o ambiente web JupyterLab para criação dos nossos notebooks de análise e tratamento, porém é possível criar scripts .py e rodar como **Jobs**, inclusive integrando com outros serviços como Pub/Sub e Dataflow para automatização do Pipeline.
+- **Dataproc** para processamento dos dados: o Dataproc é um serviço totalmente gerenciado e escalonável para executar o Spark e mais de 30 ferramentas de código aberto. Foi utilizado o ambiente web JupyterLab para criação dos nossos notebooks de análise e tratamento, porém é possível criar scripts .py e rodar como **Jobs**, inclusive integrando com outros serviços como Pub/Sub e Dataflow para automatização do Pipeline.
 
-- **BigQuery** para armazenamento dos dados na camada analítica: O BigQuery foi escolhido para ser o nosso Data WareHouse pois ele é um serviço sem servidor, altamente escalonávele e econômico.
+- **BigQuery** para armazenamento dos dados na camada analítica: o BigQuery foi escolhido para ser o nosso Data WareHouse pois ele é um serviço sem servidor, altamente escalonávele e econômico.
 
-- **Data Studio** para geração de gráficos: Para apresentação dos gráficos escolhemos a ferramenta  Google Data Studio pois ela tem integração nativa com mais de 560 conectores e custo free para uso, além de rodar em uma interface web.
+- **Data Studio** para geração de gráficos: para apresentação dos gráficos escolhemos a ferramenta  Google Data Studio, pois ela tem integração nativa com mais de 560 conectores e custo free para uso, além de rodar em uma interface web.
 <br></br>
 
 ### O DataLake foi dividido em 4 partes:
@@ -67,7 +67,7 @@ Consulte aqui a imagem do nosso [Datalake](https://github.com/gittil/bike-factor
 1. **Landing** area: Essa é a pasta local onde os arquivos recebidos por email foram salvos e ficam ali até o final do projeto.
 
 2. **Raw** Stage: Essa camada do DataLake é a primeira camada na GCP. Ela recebeu todos os arquivos CSV de forma ainda bruta. <br>
-Para carregar os arquivos locais na camada RAW, foi utilizado o seguinte scritp: [Load Raw to GCP](https://github.com/gittil/bike-factory/blob/main/ETL/1-raw-load/1-load-raw.ipynb)
+Para carregar os arquivos locais na camada RAW foi utilizado o seguinte scritp: [Load Raw to GCP](https://github.com/gittil/bike-factory/blob/main/ETL/1-raw-load/1-load-raw.ipynb)
 
 3. **Refined** Stage: A camada REFINED recebeu todos os arquivos tratados que foram carregados a partir da camara RAW. <br>
 Foi utilizado a biblioteca Pandas para fazer a manipulação dos dados (limpezas e tranformações, alteração de tipos, etc).<br>
