@@ -79,6 +79,7 @@ Para processar os dados nessa camada foi utlizado o framework Spark com a interf
 O notebook com os códigos pode ser acessado aqui: [CURATED](https://github.com/gittil/bike-factory/blob/main/ETL/3-load-curated/load-curated.ipynb)
 
 
+### Protótipo do Dashboard sugerido
 
 ![Dashboard](images/dashboard.png)
 
@@ -86,9 +87,10 @@ O notebook com os códigos pode ser acessado aqui: [CURATED](https://github.com/
 
 ## Observações e Melhorias:
 
-- Escolhi o formato de notebooks para processar os dados pela interatividade que a ferramenta possibilita, ao mesmo tempo que executamos comandos para tratar podemos ver o resultado.
-- Uma melhoria futura, uma vez que já temos todo o trajeto para tratamento dos dados de cada arquivo, seria criar scripts .py e executar como jobs no Dataproc, utilizando os serviços Pub/Sub e Cloud Functions para disparar os Jobs sempre quando a camada RAW for atualizada e assim mater um certo nível de automação.
-- Aplicar melhorias visuais no Dashboard
+- Escolhi o formato de notebooks para processar os dados pela interatividade que a ferramenta possibilita, ao mesmo tempo que executamos comandos para tratar podemos ver o resultado;
+- Uma melhoria futura, uma vez que já temos todo o trajeto para tratamento dos dados de cada arquivo, seria criar scripts .py e executar como jobs no Dataproc, utilizando os serviços Pub/Sub e Cloud Functions para disparar os Jobs sempre quando a camada RAW for atualizada e assim mater um certo nível de automação;
+- Aplicar melhorias visuais no Dashboard;
+- Não foi efetuado nenhum tratamento do ponto de vista estatístico nos dados, como tratar e entender os outliers, isso pode ser percebido no gráfico de série temporal que possui diversos picos em diversas datas.
 
 
 
